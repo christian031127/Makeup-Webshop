@@ -1,0 +1,58 @@
+.coupon {
+    margin-top: 1rem;
+  
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__input-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  
+      .coupon__input {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+  
+        &--error {
+          border-color: #e63946;
+        }
+  
+        &:focus {
+          border-color: #4caf50;
+          outline: none;
+        }
+      }
+  
+      .coupon__button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #da8188;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #c5303d;
+          transition: background-color 0.3s;
+        }
+      }
+    }
+  
+    &__error {
+      color: #e63946;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  
+    &__success {
+      color: #4caf50;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  }
+  

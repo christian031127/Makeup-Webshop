@@ -1,0 +1,36 @@
+/* Animations.less */
+@keyframes fly-to-cart {
+  0% {
+    transform: translate(0, 0) scale(1);
+    /* Starts at the initial position with normal size */
+    opacity: 1;
+    /* Fully visible */
+  }
+
+  100% {
+    transform: translate(var(--end-x, 0), var(--end-y, 0)) scale(0.5);
+    /* Moves to the cart position and scales down */
+    opacity: 0;
+    /* Fades out as it reaches the destination */
+  }
+}
+
+/**
+ * `.fly-animation` styles the image being animated from its initial position
+ * to the cart. It applies the animation defined in `@keyframes fly-to-cart`, 
+ * making the image fly towards the cart and fade out.
+ */
+.fly-animation {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Ensures the image fits within the defined width and height */
+  z-index: 1000;
+  /* Places the image above other elements */
+  pointer-events: none;
+  /* Prevents the image from interfering with user interactions */
+  animation: fly-to-cart 1s ease-in-out forwards;
+  /* Applies the animation */
+}

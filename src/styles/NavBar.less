@@ -1,0 +1,79 @@
+.navbar {
+  height: 70px;
+  /* Fixed height */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  /* Above everything */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition */
+
+  &--visible {
+    transform: translateY(0);
+    /* Appear */
+  }
+
+  &--hidden {
+    transform: translateY(-100%);
+    /* Disappear */
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__light {
+    padding-left: 65rem;
+    padding-top: 0.5rem;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: -12rem;
+    margin-top: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+    }
+
+    &-count {
+      position: absolute;
+      top: -5px;
+      right: -18px;
+      background-color: #e63946;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+}

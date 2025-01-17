@@ -1,0 +1,67 @@
+/* Default body styles */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition for background and text color changes */
+  background-color: #fff;
+  color: #000;
+}
+
+/* Dark mode styles for the body */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Dark mode toggle button styles */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+
+  /* Hover effect to slightly reduce opacity */
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Default table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  color: #000;
+  text-align: left;
+
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+}
+
+/* Dark mode styles for tables */
+body.dark-mode table {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* Dark mode styles for table headers */
+body.dark-mode th {
+  background-color: #333;
+}
+
+/* Dark mode styles for table cells */
+body.dark-mode td {
+  border-color: #444;
+}

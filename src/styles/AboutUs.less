@@ -1,0 +1,71 @@
+// About Us page styles
+.about-us {
+  padding: 2rem;
+  padding-top: 70px;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #d81b60;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__map {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+  }
+
+  &__details {
+    flex: 1;
+    min-width: 300px;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+
+        strong {
+          color: #d81b60;
+        }
+      }
+    }
+  }
+
+  // Dark mode
+  body.dark-mode & {
+    color: #fff;
+
+    h2 {
+      color: #fff;
+    }
+
+    &__details ul li {
+      color: #ccc;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.cart {
+  padding: 2rem;
+  padding-top: 70px;
+  position: relative;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    //table-layout: fixed; //You can use this to fix the table width
+
+    th,
+    td {
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid #ddd;
+      vertical-align: middle;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    select {
+      width: 60px;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .cart__product {
+      text-align: left;
+
+      img.cart__product-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        object-fit: cover;
+        display: inline-block; //Making the image inline-block
+        vertical-align: middle;
+      }
+
+      span {
+        display: inline-block; //Making the span inline-block
+        vertical-align: middle;
+        font-size: 1rem;
+        color: #333;
+        margin-left: 1rem;
+      }
+    }
+
+
+    .cart__remove {
+      padding: 0.5rem 1rem;
+      background-color: #da8188;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #c5303d;
+        transition: background-color 0.3s;
+      }
+    }
+  }
+
+  &__summary {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    font-weight: bold;
+  }
+
+  &__submit {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #45a049;
+      transition: background-color 0.3s;
+    }
+  }
+
+  .cart {
+    &__amount--strikethrough {
+      text-decoration: line-through;
+      text-decoration-color: #e63946;
+      text-decoration-thickness: 2.5px;
+    }
+
+    &__amount--discounted {
+      color: #d81b60;
+      font-weight: bold;
+      font-size: x-large;
+    }
+  }
+
+  body.dark-mode & {
+    &__table {
+
+      th,
+      td {
+        color: #fff !important; //Dark mode text color with !important
+        border-color: #444;
+      }
+
+      th {
+        background-color: #333 !important;
+      }
+
+      td {
+        background-color: #222 !important;
+      }
+
+      .cart__product span {
+        color: #fff !important;
+      }
+    }
+  }
+}

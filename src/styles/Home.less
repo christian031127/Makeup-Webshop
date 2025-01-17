@@ -1,0 +1,114 @@
+/**
+ * The `.home` class represents the main container for the home page.
+ * - Adds padding and centers text content.
+ * - Ensures proper spacing at the top for fixed headers.
+ */
+.home {
+  padding: 2rem;
+  padding-top: 80px;
+  /* Top padding adjusted for fixed headers */
+  text-align: center;
+
+  /**
+   * `.home__banner` defines the banner section at the top of the home page.
+   * - Features a soft pink background with a box-shadow and rounded corners.
+   * - Contains a heading and a paragraph for the main introductory text.
+   */
+  &__banner {
+    background-color: #f4e4ec;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /**
+     * Styles the main heading (`<h1>`) within the banner.
+     * - Highlights the title with a bold pink color and subtle shadowing for emphasis.
+     */
+    h1 {
+      font-size: 2.5rem;
+      color: #d81b60;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    /**
+     * Styles the paragraph (`<p>`) within the banner.
+     * - Provides supporting text with a subdued gray tone and slight margin.
+     */
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+  }
+
+  /**
+   * `.home__features` creates a flexible grid for feature items.
+   * - Aligns items horizontally, wrapping them on smaller screens for responsiveness.
+   * - Adds spacing between items and ensures uniform alignment.
+   */
+  &__features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    /**
+     * Represents individual feature boxes inside `.home__features`.
+     * - Each box has a card-like appearance with shadow, padding, and hover effects.
+     */
+    &>div {
+      text-align: center;
+      max-width: 250px;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      /**
+       * Adds hover effects to elevate the card and enhance visual feedback.
+       */
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /**
+       * Styles images inside feature boxes.
+       * - Maintains proportions, rounds corners, and adds a subtle hover zoom effect.
+       */
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      /**
+       * Styles the feature box title (`<h3>`).
+       * - Bold and prominently displayed with a neutral dark color.
+       */
+      h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      /**
+       * Styles the descriptive text (`<p>`) within feature boxes.
+       * - Uses a lighter gray color with good line spacing for readability.
+       */
+      p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.5;
+      }
+    }
+  }
+}

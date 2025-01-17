@@ -1,0 +1,37 @@
+/**
+ * `.search-bar` styles the overall container for the search bar.
+ * It defines the width and relative positioning of the search bar.
+ */
+.search-bar {
+  position: relative;
+  width: 300px;
+  /* A keresősáv szélessége */
+
+  /**
+   * `.search-bar__input` styles the input element within the search bar.
+   * It takes up the full width of the container, with padding for spacing around the input text.
+   */
+  &__input {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  /**
+   * `.search-bar__icon` styles the search icon.
+   * It is absolutely positioned inside the input field, aligned to the right side.
+   */
+  &__icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Precisely centers the icon */
+    font-size: 1.2rem;
+    color: #aaa;
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the icon */
+  }
+}

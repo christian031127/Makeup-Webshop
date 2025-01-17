@@ -1,0 +1,66 @@
+// import the global styles
+@import "../styles/Animations.less";
+
+// Shop component styles
+.shop {
+  padding: 2rem;
+  padding-top: 80px;
+  text-align: center;
+  color: #d81b60;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Creates a 3-column layout.
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 2rem;
+  }
+
+  &__product {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Adds a subtle shadow for depth.
+
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #d81b60;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; // Adds pointer interaction for hover states.
+
+      &:hover {
+        background-color: #b0154c;
+      }
+    }
+  }
+}
+
+.navbar {
+  display: flex; // Flexbox layout for alignment.
+  justify-content: space-between;
+  align-items: center;
+
+  .search-bar {
+    margin-right: 1rem; // Adds spacing to align the search bar near the cart button.
+  }
+}
